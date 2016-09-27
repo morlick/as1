@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+<Button
+        android:layout_width="388dp"
+        android:layout_height="wrap_content"
+        android:text="@string/go_to_add_string"
+        android:id="@+id/go_to_add_button"
+        android:layout_gravity="center_horizontal"
+    android:layout_weight="0.48" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/go_to_complete_string"
+        android:id="@+id/go_to_complete_button"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.40" />
+
+</LinearLayout>

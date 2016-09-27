@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/body"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/add_a_habit"
+        android:layout_weight="0.84" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/monday"
+        android:id="@+id/mon"
+        android:layout_weight="0.04"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tuesday"
+        android:id="@+id/tues"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wednesday"
+        android:id="@+id/wed"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:text="@string/thursday"
+        android:id="@+id/thurs"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:text="@string/friday"
+        android:id="@+id/checkBox5"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:text="@string/saturday"
+        android:id="@+id/checkBox6"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sunday"
+        android:id="@+id/checkBox7"
+        android:checked="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="188dp"
+        android:text="@string/add_habit_string"
+        android:id="@+id/add_habbit_button" />
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Joshua said:</string>
+    <string name="app_name">orlick-HabitTracker</string>
+    <string name="save">Save</string>
+    <string name="clear">Clear</string>
+    <string name="click_on_a_habit">Click on a habit to complete it.</string>
+    <string name="add_a_habit">Add a habit</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">saturday</string>
+    <string name="sunday">sunday</string>
+    <string name="add_habit_string">Add Habit</string>
+    <string name="go_to_add_string">Add a New Habit</string>
+    <string name="go_to_complete_string">Complete a habit</string>
+    <string name="oldHabitsTitle">My habits</string>
+    <string name="add_habit">Add a Habit</string>
+
+</resources>
