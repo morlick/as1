@@ -9,7 +9,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/body"
         android:layout_gravity="center_horizontal"
-        android:text="@string/add_a_habit"
         android:layout_weight="0.84" />
 
     <CheckBox
@@ -66,6 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="188dp"
         android:text="@string/add_habit_string"
-        android:id="@+id/add_habbit_button" />
+        android:id="@+id/add_habbit_button"
+        android:onClick="addHabitAction" />
 
 </LinearLayout>

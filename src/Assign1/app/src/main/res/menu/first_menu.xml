@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/file"
         android:title="@string/add_a_habit"
-        android:onClick="addhabit">
+        android:onClick="completeHabit">
 
     </item>
 </menu>

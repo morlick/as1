@@ -1,3 +1,20 @@
+/*
+Habit Tracker: User can add and complete habits.
+
+Copyright (C) 2016 Margaret orlick
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+*/
+
 package ca.ualberta.cs.assign1;
 
 // lonely twitter code from https://github.com/joshua2ua/lonelyTwitter
@@ -5,6 +22,7 @@ package ca.ualberta.cs.assign1;
 
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -36,53 +54,22 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+
 public class HabitActivity extends Activity {
 
     private static final String FILENAME = "file.sav";
     private EditText bodyText;
-    private ListView oldHabitsList;
-    private HabitList habitList = new HabitList();
+    private ArrayList<Habit> habitList = new ArrayList<Habit>();
     private ArrayAdapter<HabitList> adapter;
 
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.complete_activity);
+        setContentView(R.layout.add_habit_activity);
 
-        bodyText = (EditText) findViewById(R.id.body);
-        Button saveButton = (Button) findViewById(R.id.go_to_add_habit);
-        oldHabitsList = (ListView) findViewById(R.id.oldHabitsList);
-
-        saveButton.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                setResult(RESULT_OK);
-                String text = "hello";
-                Habit newHabit = new Habit(text);
-                newHabit.getName();
-                habitList.addHabit(newHabit);
-                adapter.notifyDataSetChanged();
-                saveInFile(text, new Date(System.currentTimeMillis()));
-            }
-        });
-
-        // code from http://www.ezzylearning.com/tutorial/handling-android-listview-onitemclick-event
-        oldHabitsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                String item = ((TextView)view).getText().toString();
-
-                Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
-
-            }
-        });
     }
 
-    public void markComplete() {
-        Toast.makeText(this,"complete" , Toast.LENGTH_SHORT ).show();
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -90,8 +77,8 @@ public class HabitActivity extends Activity {
         return true;
     }
 
-    public void addhabit(MenuItem menu) {
-        Toast.makeText(this,"add habit" , Toast.LENGTH_SHORT ).show();
+    public void completeHabit(MenuItem menu) {
+        Toast.makeText(this,"complete habit" , Toast.LENGTH_SHORT ).show();
         Intent intent = new Intent(HabitActivity.this, AddHabitActivity.class);
         startActivity(intent);
     }
@@ -100,43 +87,14 @@ public class HabitActivity extends Activity {
     protected void onStart() {
         // TODO Auto-generated method stub
         super.onStart();
-        adapter = new ArrayAdapter<HabitList>(this, R.layout.list_item, (ArrayList) habitList.getHabitList());
-        oldHabitsList.setAdapter(adapter);
+    }
+//THIS IS AN ISSUE
+    public void addHabitAction(View v) {
+      //  Toast.makeText(this, "Adding a student!", Toast.LENGTH_SHORT).show();
+     //   HabitListController hlc = new HabitListController();
+     //  EditText textView = (EditText) findViewById(R.id.body);
+      //  hlc.addHabit(new Habit(textView.getText().toString()));
     }
 
-    private void loadFromFile() {
-        ArrayList<String> habits = new ArrayList<String>();
-        try {
-            FileInputStream fis = openFileInput(FILENAME);
-            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-            String line = in.readLine();
-            while (line != null) {
-                habits.add(line);
-                line = in.readLine();
-            }
 
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            throw new RuntimeException();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            throw new RuntimeException();
-        }
-
-    }
-
-    private void saveInFile(String text, Date date) {
-        try {
-            FileOutputStream fos = openFileOutput(FILENAME,
-                    Context.MODE_APPEND);
-            fos.write(new String(date.toString() + "|" + text).getBytes());
-            fos.close();
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            throw new RuntimeException();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            throw new RuntimeException();
-        }
-    }
 }

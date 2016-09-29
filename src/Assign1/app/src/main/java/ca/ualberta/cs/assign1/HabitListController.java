@@ -12,7 +12,7 @@ public class HabitListController {
         return habitList;
     }
 
-    static public void addHabit(Habit habit) {
+    public void addHabit(Habit habit) {
         habitList.addHabit(habit);
 
     }

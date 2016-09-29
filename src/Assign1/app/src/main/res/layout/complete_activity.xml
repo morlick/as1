@@ -20,10 +20,16 @@
     <ListView
         android:id="@+id/oldHabitsList"
         android:layout_width="fill_parent"
-        android:layout_height="263dp"
-        android:layout_weight="1"
+        android:layout_height="162dp"
         android:scrollbars="vertical">
     </ListView>
+
+    <TextView
+        android:layout_width="356dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.02" />
 
     <Button
         android:layout_width="match_parent"
