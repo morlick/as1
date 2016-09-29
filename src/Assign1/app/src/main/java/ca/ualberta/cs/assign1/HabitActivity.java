@@ -17,6 +17,7 @@ import java.util.Date;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.PopupMenu;
@@ -73,7 +74,8 @@ public class HabitActivity extends Activity {
 
     public void addhabit(MenuItem menu) {
         Toast.makeText(this,"add habit" , Toast.LENGTH_SHORT ).show();
-
+        Intent intent = new Intent(HabitActivity.this, AddHabitActivity.class);
+        startActivity(intent);
     }
 
     @Override

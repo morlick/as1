@@ -19,5 +19,6 @@
     <string name="go_to_complete_string">Complete a habit</string>
     <string name="oldHabitsTitle">My habits</string>
     <string name="add_habit">Add a Habit</string>
+    <string name="title_activity_add_habit">AddHabitActivity</string>
 
 </resources>
