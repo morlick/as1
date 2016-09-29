@@ -25,9 +25,9 @@ public class AddHabitActivity extends Activity {
                                               String text = bodyText.getText().toString();
                                               Habit newHabit = new Habit(text);
                                               newHabit.getName();
-                                              //habitList.add(newHabit);
-                                              //adapter.notifyDataSetChanged();
-                                              //saveInFile();
+                                              HabitListController hlc = new HabitListController();
+                                              hlc.addHabit(newHabit);
+
                                           }
                                       }
         );

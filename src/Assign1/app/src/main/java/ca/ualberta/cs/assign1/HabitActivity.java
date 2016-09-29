@@ -25,10 +25,12 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -39,8 +41,8 @@ public class HabitActivity extends Activity {
     private static final String FILENAME = "file.sav";
     private EditText bodyText;
     private ListView oldHabitsList;
-    private ArrayList<Habit> habitList = new ArrayList<Habit>();
-    private ArrayAdapter<Habit> adapter;
+    private HabitList habitList = new HabitList();
+    private ArrayAdapter<HabitList> adapter;
 
     /** Called when the activity is first created. */
     @Override
@@ -59,11 +61,27 @@ public class HabitActivity extends Activity {
                 String text = "hello";
                 Habit newHabit = new Habit(text);
                 newHabit.getName();
-                habitList.add(newHabit);
+                habitList.addHabit(newHabit);
                 adapter.notifyDataSetChanged();
-                saveInFile();
+                saveInFile(text, new Date(System.currentTimeMillis()));
             }
         });
+
+        // code from http://www.ezzylearning.com/tutorial/handling-android-listview-onitemclick-event
+        oldHabitsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                String item = ((TextView)view).getText().toString();
+
+                Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
+
+            }
+        });
+    }
+
+    public void markComplete() {
+        Toast.makeText(this,"complete" , Toast.LENGTH_SHORT ).show();
     }
 
     @Override
@@ -82,19 +100,20 @@ public class HabitActivity extends Activity {
     protected void onStart() {
         // TODO Auto-generated method stub
         super.onStart();
-        adapter = new ArrayAdapter<Habit>(this, R.layout.list_item, habitList);
+        adapter = new ArrayAdapter<HabitList>(this, R.layout.list_item, (ArrayList) habitList.getHabitList());
         oldHabitsList.setAdapter(adapter);
     }
 
     private void loadFromFile() {
-        ArrayList<String> tweets = new ArrayList<String>();
+        ArrayList<String> habits = new ArrayList<String>();
         try {
             FileInputStream fis = openFileInput(FILENAME);
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-            Gson gson = new Gson();
-            //Code taken from http://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt Sept. 22, 2016
-            Type listType = new TypeToken<ArrayList<Habit>>(){}.getType();
-            habitList = gson.fromJson(in, listType);
+            String line = in.readLine();
+            while (line != null) {
+                habits.add(line);
+                line = in.readLine();
+            }
 
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
@@ -106,13 +125,12 @@ public class HabitActivity extends Activity {
 
     }
 
-    private void saveInFile() {
+    private void saveInFile(String text, Date date) {
         try {
-            FileOutputStream fos = openFileOutput(FILENAME, 0);
-            OutputStreamWriter writer = new OutputStreamWriter(fos);
-            Gson gson = new Gson();
-            gson.toJson(habitList, writer);
-            writer.flush();
+            FileOutputStream fos = openFileOutput(FILENAME,
+                    Context.MODE_APPEND);
+            fos.write(new String(date.toString() + "|" + text).getBytes());
+            fos.close();
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             throw new RuntimeException();

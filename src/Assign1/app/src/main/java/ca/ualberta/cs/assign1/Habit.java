@@ -36,19 +36,7 @@ public class Habit  {
     public void setDate(Date date) {
         this.date = date;
     }
-/*
-    public ArrayList<Day> getDayList() {
-       return dayList;
-    }
 
-    public void setDayList(ArrayList<Day> dayList) {
-        this.dayList = dayList;
-    }
-
-    public void addDay(Day day) {
-        dayList.add(day);
-    }
-    */
     public String getName() {
         return name;
     }
