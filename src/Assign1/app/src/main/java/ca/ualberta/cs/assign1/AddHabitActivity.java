@@ -43,8 +43,8 @@ public class AddHabitActivity extends Activity {
                                     long id) {
                 //String[] itemValue = (String[]) oldHabitList.getItemAtPosition(position);
                 //Toast.makeText(AddHabitActivity.this, itemValue[0], Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(AddHabitActivity.this, HabitActivity.class);
-                intent.putExtra("name",id);
+                Intent intent = new Intent(AddHabitActivity.this, CompleteActivity.class);
+                intent.putExtra("name",position);
                 //String message = "abc";
                 //intent.putExtra(EXTRA_MESSAGE, message);
                 startActivity(intent);

@@ -23,7 +23,10 @@
             android:label="@string/title_activity_add_habit" />
         <activity
             android:name=".CompleteHabitActivity"
-            android:label="@string/title_activity_complete_habit"></activity>
+            android:label="@string/title_activity_complete_habit" />
+        <activity
+            android:name=".CompleteActivity"
+            android:label="@string/title_activity_complete"></activity>
     </application>
 
 </manifest>

@@ -22,5 +22,6 @@
     <string name="title_activity_add_habit">AddHabitActivity</string>
     <string name="menu2_text">complete a habit</string>
     <string name="title_activity_complete_habit">CompleteHabitActivity</string>
+    <string name="title_activity_complete">CompleteActivity</string>
 
 </resources>
