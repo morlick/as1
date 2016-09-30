@@ -30,8 +30,12 @@ public class HabitTest extends ActivityInstrumentationTestCase2 {
         list.addHabit(habit);
         list.completeHabit(habit);
         assertFalse(list.isNotComplete(habit));
-
     }
-
-
+    public void testSetDay() {
+        Habit habit = new Habit("test");
+        HabitList list = new HabitList();
+        list.addHabit(habit);
+        list.addDay(habit, "monday");
+        assertEquals(list.getDay(habit, 0), "monday");
+    }
 }

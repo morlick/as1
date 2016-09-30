@@ -9,13 +9,20 @@ import java.util.Date;
  */
 public class Habit  {
     private String name;
-    private ArrayList<Date> days = new ArrayList<Date>();
-
+    private ArrayList<Date> daysComplete = new ArrayList<Date>();
+    private ArrayList<String> daysToComplete = new ArrayList<>();
 
 
     public Habit(String message){
         this.name = message;
+    }
 
+    public void addDay(String day) {
+        daysToComplete.add(day);
+    }
+
+    public ArrayList<String> getDaysToComplete() {
+        return daysToComplete;
     }
 
 
@@ -26,8 +33,7 @@ public class Habit  {
 
     public void setName(String newName) {
 
-        this.name = newName;
-    }
+        this.name = newName;    }
 
 
     public String getName() {
@@ -35,10 +41,10 @@ public class Habit  {
     }
 
     public void complete() {
-        days.add(new Date());
+        daysComplete.add(new Date());
     }
 
     public boolean isNotComplete() {
-        return days.isEmpty();
+        return daysComplete.isEmpty();
     }
 }

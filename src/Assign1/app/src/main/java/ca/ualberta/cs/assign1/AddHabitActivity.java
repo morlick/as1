@@ -30,14 +30,17 @@ import java.util.Date;
 public class AddHabitActivity extends Activity {
     private ArrayAdapter<Habit> adapter;
     private static ArrayList<Habit> myHabitList = new ArrayList();
+    private ListView view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        view = (ListView) findViewById( R.id.oldHabitsList );
         HabitList hl = new HabitList();
         HabitListController st = new HabitListController();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.complete_activity);
-        myHabitList = (ArrayList) hl.getHabitList();
+
+
     }
 
     @Override
@@ -55,13 +58,9 @@ public class AddHabitActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-
         adapter = new ArrayAdapter<Habit>(this, R.layout.list_item, myHabitList);
         Habit h = new Habit("hello");
-        ListView view = (ListView) findViewById( R.id.oldHabitsList );
-        view.setAdapter(adapter);
-
-
+        //view.setAdapter(adapter);
     }
 
 }

@@ -20,10 +20,6 @@ public class HabitList {
             return false;
     }
 
-    public Collection<Habit> getHabitList(){
-        return habitList;
-    };
-
     public void addHabit(Habit habit) {
         habitList.add(habit);
     }
@@ -44,5 +40,19 @@ public class HabitList {
     public boolean isNotComplete(Habit habit) {
         int i = habitList.indexOf(habit);
         return habitList.get(i).isNotComplete();
+    }
+
+    public ArrayList<Habit> getHabitList() {
+        return habitList;
+    }
+
+    public void addDay(Habit habit, String day) {
+        habit.addDay(day);
+    }
+    public String getDay(Habit habit, int index) {
+        ArrayList<String> list = new ArrayList<>();
+        list = habit.getDaysToComplete();
+        return list.get(index);
+
     }
 }

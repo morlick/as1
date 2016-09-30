@@ -44,28 +44,27 @@
         android:layout_width="138dp"
         android:layout_height="wrap_content"
         android:text="@string/friday"
-        android:id="@+id/checkBox5"
+        android:id="@+id/fri"
         android:checked="false" />
 
     <CheckBox
         android:layout_width="121dp"
         android:layout_height="wrap_content"
         android:text="@string/saturday"
-        android:id="@+id/checkBox6"
+        android:id="@+id/sat"
         android:checked="false" />
 
     <CheckBox
         android:layout_width="111dp"
         android:layout_height="wrap_content"
         android:text="@string/sunday"
-        android:id="@+id/checkBox7"
+        android:id="@+id/sun"
         android:checked="false" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="188dp"
         android:text="@string/add_habit_string"
-        android:id="@+id/add_habbit_button"
-        android:onClick="addHabitAction" />
+        android:id="@+id/add_habbit_button" />
 
 </LinearLayout>
