@@ -37,16 +37,21 @@ public class AddHabitActivity extends Activity {
         setContentView(R.layout.complete_activity);
 
         oldHabitList = (ListView) findViewById( R.id.oldHabitsList);
+        oldHabitList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+                //String[] itemValue = (String[]) oldHabitList.getItemAtPosition(position);
+                //Toast.makeText(AddHabitActivity.this, itemValue[0], Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(AddHabitActivity.this, HabitActivity.class);
+                intent.putExtra("name",id);
+                //String message = "abc";
+                //intent.putExtra(EXTRA_MESSAGE, message);
+                startActivity(intent);
+            }
+        });
     }
-/*
-    oldHabitList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-        @Override
-        public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {
 
-        }
-    });
-
-*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
