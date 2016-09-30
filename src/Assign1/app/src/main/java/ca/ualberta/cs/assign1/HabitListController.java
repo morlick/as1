@@ -5,6 +5,7 @@ package ca.ualberta.cs.assign1;
  */
 public class HabitListController {
     private static HabitList habitList = null;
+
     static public HabitList getHabitList() {
         if (habitList == null) {
             habitList = new HabitList();
@@ -14,7 +15,9 @@ public class HabitListController {
 
     public void addHabit(Habit habit) {
         habitList.addHabit(habit);
-
     }
 
+    public void deleteHabit(Habit habit) {
+        habitList.deleteHabit(habit);
+    }
 }

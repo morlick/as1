@@ -1,10 +1,13 @@
 package ca.ualberta.cs.assign1;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -25,70 +28,40 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class AddHabitActivity extends Activity {
+    private ArrayAdapter<Habit> adapter;
+    private static ArrayList<Habit> myHabitList = new ArrayList();
 
-    private ArrayList<Habit> habitList = new ArrayList<Habit>();
-
-    private static final String FILENAME = "file.sav";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        HabitList hl = new HabitList();
+        HabitListController st = new HabitListController();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.complete_activity);
-      //  loadFromFile();
-
+        myHabitList = (ArrayList) hl.getHabitList();
     }
-/*
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.first_menu, menu);
+        getMenuInflater().inflate(R.menu.second_menu, menu);
         return true;
     }
-*/
+
+    public void goToAddHabit(MenuItem menu) {
+        Toast.makeText(this,"complete habit" , Toast.LENGTH_SHORT ).show();
+        Intent intent = new Intent(AddHabitActivity.this, HabitActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onStart() {
-        // TODO Auto-generated method stub
         super.onStart();
-        HabitListController st = new HabitListController();
-      //  try {
-            Habit h = new Habit("hello");
-            TextView view = (TextView) findViewById( R.id.textView );
-            view.setText(h.getName());
-       // } catch (EmptyHabitListException e) {
-          //  Toast.makeText(this, "There are no students!", Toast.LENGTH_SHORT).show();
-       // }
-    }
 
-    private void loadFromFile() {
-        ArrayList<String> habits = new ArrayList<String>();
-        try {
-            FileInputStream fis = openFileInput(FILENAME);
-            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-            Gson gson = new Gson();
-            //Code taken from http://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt Sept.22,2016
-            Type listType = new TypeToken<ArrayList<Habit>>(){}.getType();
-//            habitList = gson.fromJson(in, listType);
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            habitList = new ArrayList<Habit>();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            throw new RuntimeException();
-        }
-    }
+        adapter = new ArrayAdapter<Habit>(this, R.layout.list_item, myHabitList);
+        Habit h = new Habit("hello");
+        ListView view = (ListView) findViewById( R.id.oldHabitsList );
+        view.setAdapter(adapter);
 
 
-    private void saveInFile(String text, Date date) {
-        try {
-            FileOutputStream fos = openFileOutput(FILENAME,
-                    Context.MODE_APPEND);
-            fos.write(new String(date.toString() + "|" + text).getBytes());
-            fos.close();
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            throw new RuntimeException();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            throw new RuntimeException();
-        }
     }
+
 }

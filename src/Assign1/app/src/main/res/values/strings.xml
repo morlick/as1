@@ -20,5 +20,6 @@
     <string name="oldHabitsTitle">My habits</string>
     <string name="add_habit">Add a Habit</string>
     <string name="title_activity_add_habit">AddHabitActivity</string>
+    <string name="menu2_text">complete a habit</string>
 
 </resources>

@@ -9,17 +9,13 @@ import java.util.Date;
  */
 public class Habit  {
     private String name;
-    private Date date;
-    //private ArrayList<Day> dayList = new ArrayList<Day>();
+    private ArrayList<Date> days = new ArrayList<Date>();
+
+
 
     public Habit(String message){
         this.name = message;
-        this.date = new Date();
-    }
 
-    public Habit(String message, Date date){
-        this.name = message;
-        this.date = date;
     }
 
 
@@ -33,15 +29,16 @@ public class Habit  {
         this.name = newName;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
 
     public String getName() {
         return name;
     }
 
-    public Date getDate() {
-        return date;
+    public void complete() {
+        days.add(new Date());
+    }
+
+    public boolean isNotComplete() {
+        return days.isEmpty();
     }
 }

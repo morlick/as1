@@ -57,11 +57,6 @@ import com.google.gson.reflect.TypeToken;
 
 public class HabitActivity extends Activity {
 
-    private static final String FILENAME = "file.sav";
-    private EditText bodyText;
-    private ArrayList<Habit> habitList = new ArrayList<Habit>();
-    private ArrayAdapter<HabitList> adapter;
-
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -78,7 +73,7 @@ public class HabitActivity extends Activity {
     }
 
     public void completeHabit(MenuItem menu) {
-        Toast.makeText(this,"complete habit" , Toast.LENGTH_SHORT ).show();
+        Toast.makeText(this,"add habit" , Toast.LENGTH_SHORT ).show();
         Intent intent = new Intent(HabitActivity.this, AddHabitActivity.class);
         startActivity(intent);
     }
@@ -90,10 +85,10 @@ public class HabitActivity extends Activity {
     }
 //THIS IS AN ISSUE
     public void addHabitAction(View v) {
-      //  Toast.makeText(this, "Adding a student!", Toast.LENGTH_SHORT).show();
-     //   HabitListController hlc = new HabitListController();
-     //  EditText textView = (EditText) findViewById(R.id.body);
-      //  hlc.addHabit(new Habit(textView.getText().toString()));
+        Toast.makeText(this, "Adding a habit!", Toast.LENGTH_SHORT).show();
+       // HabitListController hlc = new HabitListController();
+      //  EditText textView = (EditText) findViewById(R.id.body);
+       // hlc.addHabit(new Habit(textView.getText().toString()));
     }
 
 

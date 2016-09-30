@@ -11,31 +11,18 @@
         android:text="@string/oldHabitsTitle" />
 
     <TextView
+        android:id="@+id/textview"
         android:layout_width="354dp"
         android:layout_height="wrap_content"
         android:text="@string/click_on_a_habit"
-        android:id="@+id/textview"
         android:layout_gravity="center_horizontal" />
 
     <ListView
         android:id="@+id/oldHabitsList"
         android:layout_width="fill_parent"
-        android:layout_height="162dp"
+        android:layout_height="match_parent"
         android:scrollbars="vertical">
     </ListView>
 
-    <TextView
-        android:layout_width="356dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.02" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/add_habit"
-        android:id="@+id/go_to_add_habit"
-        android:layout_weight="0.03" />
 
 </LinearLayout>
