@@ -10,10 +10,16 @@ import java.util.Date;
 public class Habit  {
     private String name;
     private ArrayList<Date> daysComplete = new ArrayList<Date>();
-    private ArrayList<String> daysToComplete = new ArrayList<>();
+    private ArrayList<String> daysToComplete = new ArrayList<String>();
+    private Date date;
 
+    public Habit(String name, Date date) {
+        this.name = name;
+        this.date = date;
+    }
 
     public Habit(String message){
+        this.date = new Date();
         this.name = message;
     }
 
@@ -25,6 +31,25 @@ public class Habit  {
         return daysToComplete;
     }
 
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public ArrayList<Date> getDaysComplete() {
+        return daysComplete;
+    }
+
+    public void setDaysComplete(ArrayList<Date> daysComplete) {
+        this.daysComplete = daysComplete;
+    }
+
+    public void setDaysToComplete(ArrayList<String> daysToComplete) {
+        this.daysToComplete = daysToComplete;
+    }
 
     @Override
     public String toString() {

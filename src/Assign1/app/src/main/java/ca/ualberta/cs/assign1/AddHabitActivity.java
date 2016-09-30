@@ -11,8 +11,16 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.Toast;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class AddHabitActivity extends Activity {
@@ -55,13 +63,43 @@ public class AddHabitActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-        adapter = new ArrayAdapter<Habit>(this, R.layout.list_item, myHabitList);
 
-        oldHabitList.setAdapter(adapter);
+        //simple adapter code adapted from code at
+        //http://stackoverflow.com/questions/7920558/android-date-format-inside-listview
+
+        List<Map<String, String>> data = new ArrayList<Map<String, String>>();
+        for (Habit habit: hl.getHabitList()) {
+            Map<String, String> datum = new HashMap<String, String>(2);
+            datum.put("name", habit.getName());
+
+            String dateStr = habit.getDate().toString();
+            SimpleDateFormat curFormater = new SimpleDateFormat("EEEE, MMMM dd, yyyy");
+            Date dateObj = habit.getDate();
+            try {
+                dateObj = curFormater.parse(dateStr);
+            } catch (ParseException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            SimpleDateFormat postFormater = new SimpleDateFormat("EEEE, MMMM dd, yyyy");
+
+            String newDateStr = postFormater.format(dateObj);
+
+            datum.put("date", newDateStr);
+            data.add(datum);
+        }
+        SimpleAdapter adapter = new SimpleAdapter(this, data,
+                android.R.layout.simple_list_item_2,
+                new String[] {"name", "date"},
+                new int[] {android.R.id.text1,
+                        android.R.id.text2});
+
         myHabitList = hl.getHabitList();
-        adapter.addAll(myHabitList);
+        oldHabitList.setAdapter(adapter);
+        //oldHabitList.setOnItemClickListener(this);
 
-        //adapter.notifyDataSetChanged();
+        oldHabitList.setSelection(0);
+
     }
 
 }

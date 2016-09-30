@@ -4,6 +4,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 
 /**
  * Created by orlick on 9/28/16.
@@ -15,6 +16,8 @@ public class HabitList {
     public HabitList() {
 
     }
+
+
     public boolean containsHabit(Habit habit) {
         return habitList.contains(habit);
     }
@@ -30,6 +33,22 @@ public class HabitList {
     public Habit getHabit(int index) {
         return habitList.get(index);
 
+    }
+
+    public Date getDate(Habit habit) {
+        return habit.getDate();
+    }
+
+    public void setDate(Habit habit,Date date) {
+        habit.setDate(date);
+    }
+
+    public ArrayList<Date> getDaysComplete(Habit habit) {
+        return habit.getDaysComplete();
+    }
+
+    public void setDaysComplete(ArrayList<Date> daysComplete, Habit habit) {
+        habit.setDaysComplete(daysComplete);
     }
 
     public void completeHabit(Habit habit) {
@@ -48,6 +67,7 @@ public class HabitList {
     public void addDay(Habit habit, String day) {
         habit.addDay(day);
     }
+
     public String getDay(Habit habit, int index) {
         ArrayList<String> list;
         list = habit.getDaysToComplete();
