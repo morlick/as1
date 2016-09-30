@@ -1,5 +1,7 @@
 package ca.ualberta.cs.assign1;
 
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -8,16 +10,13 @@ import java.util.Collection;
  */
 public class HabitList {
 
-    protected static ArrayList<Habit> habitList;
+    private static ArrayList<Habit> habitList = new ArrayList<Habit>();
 
     public HabitList() {
-        habitList = new ArrayList<Habit>();
+
     }
     public boolean containsHabit(Habit habit) {
-        if (habitList.contains(habit))
-            return true;
-        else
-            return false;
+        return habitList.contains(habit);
     }
 
     public void addHabit(Habit habit) {
@@ -50,7 +49,7 @@ public class HabitList {
         habit.addDay(day);
     }
     public String getDay(Habit habit, int index) {
-        ArrayList<String> list = new ArrayList<>();
+        ArrayList<String> list;
         list = habit.getDaysToComplete();
         return list.get(index);
 

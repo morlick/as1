@@ -15,7 +15,8 @@ public class AddHabitActivity extends Activity {
     private ArrayAdapter<Habit> adapter;
     private ListView oldHabitList;
 
-    private static ArrayList<Habit> myHabitList = new ArrayList();
+    private  ArrayList<Habit> myHabitList = new ArrayList();
+
     private HabitList hl = new HabitList();
 
     @Override
@@ -42,9 +43,12 @@ public class AddHabitActivity extends Activity {
     protected void onStart() {
         super.onStart();
         adapter = new ArrayAdapter<Habit>(this, R.layout.list_item, myHabitList);
+
         oldHabitList.setAdapter(adapter);
         myHabitList = hl.getHabitList();
-        adapter.notifyDataSetChanged();
+        adapter.addAll(myHabitList);
+
+        //adapter.notifyDataSetChanged();
     }
 
 }

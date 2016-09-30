@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ca.ualberta.cs.assign1">
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -19,7 +20,10 @@
         </activity>
         <activity
             android:name=".AddHabitActivity"
-            android:label="@string/title_activity_add_habit"></activity>
+            android:label="@string/title_activity_add_habit" />
+        <activity
+            android:name=".CompleteHabitActivity"
+            android:label="@string/title_activity_complete_habit"></activity>
     </application>
 
 </manifest>

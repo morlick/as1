@@ -26,11 +26,9 @@ import android.os.Bundle;
 import android.view.Menu;;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -57,7 +55,6 @@ public class HabitActivity extends Activity {
                 setResult(RESULT_OK);
                 String text = bodyText.getText().toString();
                 Habit newHabit = new Habit(text);
-                newHabit.getName();
                 for (String day : dayList)
                     newHabit.addDay(day);
                 hl.addHabit(newHabit);
@@ -70,11 +67,9 @@ public class HabitActivity extends Activity {
                 setResult(RESULT_OK);
                 if (dayList.contains("monday")) {
                     dayList.remove("monday");
-                    Toast.makeText(getApplicationContext(), "remove", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     dayList.add("monday");
-                    Toast.makeText(getApplicationContext(), "add", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -165,7 +160,6 @@ public class HabitActivity extends Activity {
     }
 
     public void completeHabit(MenuItem menu) {
-        Toast.makeText(this,"add habit" , Toast.LENGTH_SHORT ).show();
         Intent intent = new Intent(HabitActivity.this, AddHabitActivity.class);
         startActivity(intent);
     }
