@@ -38,7 +38,6 @@ import java.util.ArrayList;
 public class HabitActivity extends Activity {
     private EditText bodyText;
     private HabitList hl = new HabitList();
-    private ArrayList<Habit> habitList = new ArrayList<>();
     private ArrayList<String> dayList = new ArrayList<>();
 
 
@@ -49,7 +48,6 @@ public class HabitActivity extends Activity {
         setContentView(R.layout.add_habit_activity);
 
         bodyText = (EditText) findViewById(R.id.body);
-        habitList = hl.getHabitList();
         Button saveButton = (Button) findViewById(R.id.add_habbit_button);
 
 
@@ -62,7 +60,6 @@ public class HabitActivity extends Activity {
                 newHabit.getName();
                 for (String day : dayList)
                     newHabit.addDay(day);
-                habitList.add(newHabit);
                 hl.addHabit(newHabit);
             }
         });
