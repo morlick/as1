@@ -53,40 +53,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HabitActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HabitActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/assign1/HabitActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46448088">
-              <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
               <folding>
-                <element signature="e#0#5311#0" expanded="true" />
+                <element signature="e#0#5365#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#1673#2041#0" expanded="true" />
-                <element signature="e#2040#2041#0" expanded="true" />
-                <element signature="e#2139#2470#0" expanded="true" />
-                <element signature="e#2469#2470#0" expanded="true" />
-                <element signature="e#2571#2867#0" expanded="true" />
-                <element signature="e#2866#2867#0" expanded="true" />
-                <element signature="e#2971#3273#0" expanded="true" />
-                <element signature="e#3272#3273#0" expanded="true" />
-                <element signature="e#3377#3676#0" expanded="true" />
-                <element signature="e#3675#3676#0" expanded="true" />
-                <element signature="e#3774#4067#0" expanded="true" />
-                <element signature="e#4066#4067#0" expanded="true" />
-                <element signature="e#4169#4468#0" expanded="true" />
-                <element signature="e#4467#4468#0" expanded="true" />
-                <element signature="e#4566#4859#0" expanded="true" />
-                <element signature="e#4858#4859#0" expanded="true" />
+                <element signature="e#1727#2095#0" expanded="true" />
+                <element signature="e#2094#2095#0" expanded="true" />
+                <element signature="e#2193#2524#0" expanded="true" />
+                <element signature="e#2523#2524#0" expanded="true" />
+                <element signature="e#2625#2921#0" expanded="true" />
+                <element signature="e#2920#2921#0" expanded="true" />
+                <element signature="e#3025#3327#0" expanded="true" />
+                <element signature="e#3326#3327#0" expanded="true" />
+                <element signature="e#3431#3730#0" expanded="true" />
+                <element signature="e#3729#3730#0" expanded="true" />
+                <element signature="e#3828#4121#0" expanded="true" />
+                <element signature="e#4120#4121#0" expanded="true" />
+                <element signature="e#4223#4522#0" expanded="true" />
+                <element signature="e#4521#4522#0" expanded="true" />
+                <element signature="e#4620#4913#0" expanded="true" />
+                <element signature="e#4912#4913#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddHabitActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AddHabitActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/assign1/AddHabitActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.45666236">
+              <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,13 +96,13 @@
       </file>
       <file leaf-file-name="complete_activity.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/complete_activity.xml">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.321428">
               <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer">
+          <provider editor-type-id="android-designer">
             <state />
           </provider>
         </entry>
@@ -1775,12 +1775,12 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/assign1/HabitList.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/assign1/HabitListController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/assign1/AddHabitActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/assign1/HabitActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_complete_habit.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_habit.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/assign1/CompleteHabitActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/assign1/HabitActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/assign1/AddHabitActivity.java" />
       </list>
     </option>
   </component>
@@ -2166,7 +2166,7 @@
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32945284" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.06868452" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -2244,24 +2244,24 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#5311#0" expanded="true" />
+            <element signature="e#0#5365#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1673#2041#0" expanded="true" />
-            <element signature="e#2040#2041#0" expanded="true" />
-            <element signature="e#2139#2470#0" expanded="true" />
-            <element signature="e#2469#2470#0" expanded="true" />
-            <element signature="e#2571#2867#0" expanded="true" />
-            <element signature="e#2866#2867#0" expanded="true" />
-            <element signature="e#2971#3273#0" expanded="true" />
-            <element signature="e#3272#3273#0" expanded="true" />
-            <element signature="e#3377#3676#0" expanded="true" />
-            <element signature="e#3675#3676#0" expanded="true" />
-            <element signature="e#3774#4067#0" expanded="true" />
-            <element signature="e#4066#4067#0" expanded="true" />
-            <element signature="e#4169#4468#0" expanded="true" />
-            <element signature="e#4467#4468#0" expanded="true" />
-            <element signature="e#4566#4859#0" expanded="true" />
-            <element signature="e#4858#4859#0" expanded="true" />
+            <element signature="e#1727#2095#0" expanded="true" />
+            <element signature="e#2094#2095#0" expanded="true" />
+            <element signature="e#2193#2524#0" expanded="true" />
+            <element signature="e#2523#2524#0" expanded="true" />
+            <element signature="e#2625#2921#0" expanded="true" />
+            <element signature="e#2920#2921#0" expanded="true" />
+            <element signature="e#3025#3327#0" expanded="true" />
+            <element signature="e#3326#3327#0" expanded="true" />
+            <element signature="e#3431#3730#0" expanded="true" />
+            <element signature="e#3729#3730#0" expanded="true" />
+            <element signature="e#3828#4121#0" expanded="true" />
+            <element signature="e#4120#4121#0" expanded="true" />
+            <element signature="e#4223#4522#0" expanded="true" />
+            <element signature="e#4521#4522#0" expanded="true" />
+            <element signature="e#4620#4913#0" expanded="true" />
+            <element signature="e#4912#4913#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2429,50 +2429,50 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/complete_activity.xml">
-      <provider editor-type-id="text-editor">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/assign1/HabitActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#5365#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1727#2095#0" expanded="true" />
+            <element signature="e#2094#2095#0" expanded="true" />
+            <element signature="e#2193#2524#0" expanded="true" />
+            <element signature="e#2523#2524#0" expanded="true" />
+            <element signature="e#2625#2921#0" expanded="true" />
+            <element signature="e#2920#2921#0" expanded="true" />
+            <element signature="e#3025#3327#0" expanded="true" />
+            <element signature="e#3326#3327#0" expanded="true" />
+            <element signature="e#3431#3730#0" expanded="true" />
+            <element signature="e#3729#3730#0" expanded="true" />
+            <element signature="e#3828#4121#0" expanded="true" />
+            <element signature="e#4120#4121#0" expanded="true" />
+            <element signature="e#4223#4522#0" expanded="true" />
+            <element signature="e#4521#4522#0" expanded="true" />
+            <element signature="e#4620#4913#0" expanded="true" />
+            <element signature="e#4912#4913#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/complete_activity.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.321428">
           <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
+      <provider editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/assign1/AddHabitActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.45666236">
+          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/ualberta/cs/assign1/HabitActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46448088">
-          <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#5311#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#1673#2041#0" expanded="true" />
-            <element signature="e#2040#2041#0" expanded="true" />
-            <element signature="e#2139#2470#0" expanded="true" />
-            <element signature="e#2469#2470#0" expanded="true" />
-            <element signature="e#2571#2867#0" expanded="true" />
-            <element signature="e#2866#2867#0" expanded="true" />
-            <element signature="e#2971#3273#0" expanded="true" />
-            <element signature="e#3272#3273#0" expanded="true" />
-            <element signature="e#3377#3676#0" expanded="true" />
-            <element signature="e#3675#3676#0" expanded="true" />
-            <element signature="e#3774#4067#0" expanded="true" />
-            <element signature="e#4066#4067#0" expanded="true" />
-            <element signature="e#4169#4468#0" expanded="true" />
-            <element signature="e#4467#4468#0" expanded="true" />
-            <element signature="e#4566#4859#0" expanded="true" />
-            <element signature="e#4858#4859#0" expanded="true" />
           </folding>
         </state>
       </provider>

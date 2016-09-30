@@ -1,10 +1,14 @@
 package ca.ualberta.cs.assign1;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -26,6 +30,15 @@ public class AddHabitActivity extends Activity {
 
         oldHabitList = (ListView) findViewById( R.id.oldHabitsList);
     }
+/*
+    oldHabitList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {
+
+        }
+    });
+
+*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){

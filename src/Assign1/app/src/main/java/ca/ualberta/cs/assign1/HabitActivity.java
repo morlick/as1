@@ -18,6 +18,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 package ca.ualberta.cs.assign1;
 
 // lonely twitter code from https://github.com/joshua2ua/lonelyTwitter
+// referenced Student Picker videos while making this
 
 
 import android.app.Activity;
