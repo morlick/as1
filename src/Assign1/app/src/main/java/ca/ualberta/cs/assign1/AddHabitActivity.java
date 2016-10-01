@@ -22,7 +22,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
+/*
+This activity deals with the list of added habits.
+A User can view the habits and delete habits.
+ */
 public class AddHabitActivity extends Activity {
     private ArrayAdapter<Habit> adapter;
     private ListView oldHabitList;
@@ -38,30 +41,33 @@ public class AddHabitActivity extends Activity {
         setContentView(R.layout.complete_activity);
 
         oldHabitList = (ListView) findViewById( R.id.oldHabitsList);
+
+        // When a user clicks on a list item, they do to a page of the history of that habit
         oldHabitList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
-                //String[] itemValue = (String[]) oldHabitList.getItemAtPosition(position);
-                //Toast.makeText(AddHabitActivity.this, itemValue[0], Toast.LENGTH_SHORT).show();
+                //goes to habit record
                 Intent intent = new Intent(AddHabitActivity.this, CompleteActivity.class);
                 intent.putExtra("name",position);
-                //String message = "abc";
-                //intent.putExtra(EXTRA_MESSAGE, message);
                 startActivity(intent);
             }
         });
 
+        // When a user presses and hold on a habit, they are prompted to delete the habit.
         oldHabitList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view,
                                            int position, long id) {
+
+                //prompts to delete habit
                 AlertDialog.Builder adb = new AlertDialog.Builder(AddHabitActivity.this);
                 adb.setMessage("Delete "+myHabitList.get(position).getName()+"?");
                 adb.setCancelable(true);
                 final int finalPosition = position;
                 adb.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                    //delete button click
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Habit habit = myHabitList.get(finalPosition);
@@ -73,6 +79,8 @@ public class AddHabitActivity extends Activity {
                     }
                 });
                 adb.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
+                    //cancel button click
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                     }
@@ -87,15 +95,15 @@ public class AddHabitActivity extends Activity {
         super.onPause();
     }
 
-
+    // in the menu the user can return to the add habit screen
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.second_menu, menu);
         return true;
     }
 
+    //returns to ad habit activity
     public void goToAddHabit(MenuItem menu) {
-        Toast.makeText(this,"complete habit" , Toast.LENGTH_SHORT ).show();
         Intent intent = new Intent(AddHabitActivity.this, HabitActivity.class);
         startActivity(intent);
     }
@@ -106,6 +114,9 @@ public class AddHabitActivity extends Activity {
 
         //simple adapter code adapted from code at
         //http://stackoverflow.com/questions/7920558/android-date-format-inside-listview
+
+        // this creates a simple adapter and adds the habits to it
+        //the list view shows the habit and the date is was created on
 
         List<Map<String, String>> data = new ArrayList<Map<String, String>>();
         for (Habit habit: hl.getHabitList()) {

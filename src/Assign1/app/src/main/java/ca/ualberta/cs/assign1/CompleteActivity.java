@@ -16,6 +16,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
+/*
+This shows a list of completions of habits.
+the user can complete the ahbit or delete the record of completion.
+
+*/
+
+
 public class CompleteActivity extends Activity {
     private HabitList hl = new HabitList();
     private ListView oldCompletions;
@@ -28,10 +35,13 @@ public class CompleteActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complete);
 
+
         oldCompletions = (ListView) findViewById(R.id.listView);
         Button completeButton = (Button) findViewById(R.id.button_to_complete);
 
-
+        //completes the habit
+        //adds the date of completion to list view
+        //increments completion count
         completeButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -46,6 +56,8 @@ public class CompleteActivity extends Activity {
             }
         });
 
+        //user can delete the habit by pressing and holding
+        //they are prompted to delete or cancel
         oldCompletions.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view,
@@ -55,6 +67,8 @@ public class CompleteActivity extends Activity {
                 adb.setCancelable(true);
                 final int finalPosition = position;
                 adb.setPositiveButton("Delete", new DialogInterface.OnClickListener(){
+
+                    //delete button
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Date date = dateList.get(finalPosition);
@@ -66,6 +80,8 @@ public class CompleteActivity extends Activity {
 
                     }
                 });
+
+                //cancel button
                 adb.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -83,10 +99,13 @@ public class CompleteActivity extends Activity {
     }
 
 
+
     @Override
     protected void onStart() {
         super.onStart();
 
+        //adds titles to screen
+        //these change depending on the habit the user is viewing
         int data = getIntent().getExtras().getInt("name");
         Habit habit = hl.getHabit(data);
         myHabit = habit;

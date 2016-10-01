@@ -20,6 +20,10 @@ package ca.ualberta.cs.assign1;
 // lonely twitter code from https://github.com/joshua2ua/lonelyTwitter
 // referenced Student Picker videos while making this
 
+/*
+This deals with adding a habit and selecting the days to complete it on
+
+ */
 
 import android.app.Activity;
 import android.content.Context;
@@ -32,18 +36,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 
@@ -51,7 +43,7 @@ public class HabitActivity extends Activity {
     private EditText bodyText;
     private HabitList hl = new HabitList();
     private ArrayList<String> dayList = new ArrayList<>();
-    //private String FILENAME = "file.dat";
+
 
 
     /** Called when the activity is first created. */
@@ -63,7 +55,8 @@ public class HabitActivity extends Activity {
         bodyText = (EditText) findViewById(R.id.body);
         Button saveButton = (Button) findViewById(R.id.add_habbit_button);
 
-
+        //deals with adding a habit
+        //if the user does not enter a date, the current date is autofilled
         saveButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -75,6 +68,8 @@ public class HabitActivity extends Activity {
                 hl.addHabit(newHabit);
             }
         });
+
+        //the checkboxes for the user to choose days for the habit
         CheckBox monday = (CheckBox) findViewById(R.id.mon);
         monday.setOnClickListener(new View.OnClickListener() {
 
@@ -168,12 +163,15 @@ public class HabitActivity extends Activity {
         });
 
     }
+
+    //options menu to got to list of habits
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.first_menu, menu);
         return true;
     }
 
+    //goes to habit list
     public void completeHabit(MenuItem menu) {
         Intent intent = new Intent(HabitActivity.this, AddHabitActivity.class);
         startActivity(intent);
@@ -182,58 +180,15 @@ public class HabitActivity extends Activity {
     @Override
     public void onPause() {
         super.onPause();
-        //saveInFile();
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        //loadFromFile();
-    }
-
-/*
-    private void loadFromFile() {
-        ArrayList<Habit> array = new ArrayList<Habit>();
-        try {
-            FileInputStream fis = openFileInput(FILENAME);
-            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-
-            Gson gson = new Gson();
-            // Took from https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/Gson.html Jan-21-2016
-            Type listType = new TypeToken<ArrayList<Habit>>() {}.getType();
-            array = gson.fromJson(in, listType);
-            for (Habit item: array) {
-                hl.addHabit(item);
-            }
-
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            throw new RuntimeException();
-           // hl = new HabitList();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            throw new RuntimeException();
-        }
 
     }
-    private void saveInFile() {
-        try {
-            FileOutputStream fos = openFileOutput(FILENAME,
-                    0);
 
-            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
-            Gson gson = new Gson();
-            gson.toJson(hl.getHabitList(), out);
-            out.flush();
 
-            fos.close();
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            throw new RuntimeException();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            throw new RuntimeException();
-        }
-    } */
 }
 
