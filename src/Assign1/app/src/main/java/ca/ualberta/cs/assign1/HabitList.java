@@ -17,6 +17,17 @@ public class HabitList {
 
     }
 
+    public int getCompleted(Habit habit) {
+        return habit.getCompleted();
+    }
+
+    public void increaseCompleted(Habit habit) {
+        habit.increaseCompleted();
+    }
+    public void decreaseCompleted(Habit habit) {
+        habit.decreaseCompleted();
+    }
+
 
     public boolean containsHabit(Habit habit) {
         return habitList.contains(habit);

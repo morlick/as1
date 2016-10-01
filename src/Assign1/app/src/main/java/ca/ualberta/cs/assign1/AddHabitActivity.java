@@ -50,7 +50,38 @@ public class AddHabitActivity extends Activity {
                 startActivity(intent);
             }
         });
+
+        oldHabitList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view,
+                                           int position, long id) {
+                AlertDialog.Builder adb = new AlertDialog.Builder(AddHabitActivity.this);
+                adb.setMessage("Delete "+myHabitList.get(position).getName()+"?");
+                adb.setCancelable(true);
+                final int finalPosition = position;
+                adb.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Habit habit = myHabitList.get(finalPosition);
+                        myHabitList.remove(habit);
+                        hl.deleteHabit(habit);
+                        //adapter.remove(habit);
+                        //adapter.notifyDataSetChanged();
+
+                    }
+                });
+                adb.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+                adb.show();
+                return false;
+            }
+        });
     }
+
 
 
     @Override
@@ -103,7 +134,7 @@ public class AddHabitActivity extends Activity {
         oldHabitList.setAdapter(adapter);
         //oldHabitList.setOnItemClickListener(this);
 
-        oldHabitList.setSelection(0);
+        //oldHabitList.setSelection(0);
 
     }
 

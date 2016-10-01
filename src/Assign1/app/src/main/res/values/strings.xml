@@ -5,7 +5,7 @@
     <string name="app_name">orlick-HabitTracker</string>
     <string name="save">Save</string>
     <string name="clear">Clear</string>
-    <string name="click_on_a_habit">Click on a habit to complete it.</string>
+    <string name="click_on_a_habit">Click on a habit to complete it. It will disappear forever when you leave this page. </string>
     <string name="add_a_habit">Add a habit</string>
     <string name="monday">Monday</string>
     <string name="tuesday">Tuesday</string>

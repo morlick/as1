@@ -12,6 +12,7 @@ public class Habit  {
     private ArrayList<Date> daysComplete = new ArrayList<Date>();
     private ArrayList<String> daysToComplete = new ArrayList<String>();
     private Date date;
+    private int completed = 0;
 
     public Habit(String name, Date date) {
         this.name = name;
@@ -22,6 +23,11 @@ public class Habit  {
         this.date = new Date();
         this.name = message;
     }
+
+    public int getCompleted() {
+        return completed;
+    }
+
 
     public void addDay(String day) {
         daysToComplete.add(day);
@@ -71,5 +77,12 @@ public class Habit  {
 
     public boolean isNotComplete() {
         return daysComplete.isEmpty();
+    }
+
+    public void increaseCompleted() {
+        completed += 1;
+    }
+    public void decreaseCompleted() {
+        completed -= 1;
     }
 }
