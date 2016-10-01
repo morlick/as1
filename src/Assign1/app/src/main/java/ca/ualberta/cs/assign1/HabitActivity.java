@@ -80,11 +80,11 @@ public class HabitActivity extends Activity {
 
             public void onClick(View v) {
                 setResult(RESULT_OK);
-                if (dayList.contains("monday")) {
-                    dayList.remove("monday");
+                if (dayList.contains("Monday")) {
+                    dayList.remove("Monday");
                 }
                 else {
-                    dayList.add("monday");
+                    dayList.add("Monday");
                 }
             }
         });
@@ -93,11 +93,11 @@ public class HabitActivity extends Activity {
 
             public void onClick(View v) {
                 setResult(RESULT_OK);
-                if (dayList.contains("tuesday"))
-                    dayList.remove("tuesday");
+                if (dayList.contains("Tuesday"))
+                    dayList.remove("Tuesday");
 
                 else
-                    dayList.add("tuesday");
+                    dayList.add("Tuesday");
 
             }
         });
@@ -106,11 +106,11 @@ public class HabitActivity extends Activity {
 
             public void onClick(View v) {
                 setResult(RESULT_OK);
-                if (dayList.contains("wednesday"))
-                    dayList.remove("wednesday");
+                if (dayList.contains("Wednesday"))
+                    dayList.remove("Wednesday");
 
                 else
-                    dayList.add("wednesday");
+                    dayList.add("Wednesday");
 
             }
         });
@@ -119,11 +119,11 @@ public class HabitActivity extends Activity {
 
             public void onClick(View v) {
                 setResult(RESULT_OK);
-                if (dayList.contains("thursday"))
-                    dayList.remove("thursday");
+                if (dayList.contains("Thursday"))
+                    dayList.remove("Thursday");
 
                 else
-                    dayList.add("thursday");
+                    dayList.add("Thursday");
 
             }
         });
@@ -132,11 +132,11 @@ public class HabitActivity extends Activity {
 
             public void onClick(View v) {
                 setResult(RESULT_OK);
-                if (dayList.contains("friday"))
-                    dayList.remove("friday");
+                if (dayList.contains("Friday"))
+                    dayList.remove("Friday");
 
                 else
-                    dayList.add("friday");
+                    dayList.add("Friday");
 
             }
         });
@@ -145,11 +145,11 @@ public class HabitActivity extends Activity {
 
             public void onClick(View v) {
                 setResult(RESULT_OK);
-                if (dayList.contains("saturday"))
-                    dayList.remove("saturday");
+                if (dayList.contains("Saturday"))
+                    dayList.remove("Saturday");
 
                 else
-                    dayList.add("saturday");
+                    dayList.add("Saturday");
 
             }
         });
@@ -158,11 +158,11 @@ public class HabitActivity extends Activity {
 
             public void onClick(View v) {
                 setResult(RESULT_OK);
-                if (dayList.contains("sunday"))
-                    dayList.remove("sunday");
+                if (dayList.contains("Sunday"))
+                    dayList.remove("Sunday");
 
                 else
-                    dayList.add("sunday");
+                    dayList.add("Sunday");
 
             }
         });
