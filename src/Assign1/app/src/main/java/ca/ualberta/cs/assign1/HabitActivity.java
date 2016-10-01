@@ -22,6 +22,7 @@ package ca.ualberta.cs.assign1;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;;
@@ -31,6 +32,18 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 
@@ -38,6 +51,7 @@ public class HabitActivity extends Activity {
     private EditText bodyText;
     private HabitList hl = new HabitList();
     private ArrayList<String> dayList = new ArrayList<>();
+    //private String FILENAME = "file.dat";
 
 
     /** Called when the activity is first created. */
@@ -166,10 +180,60 @@ public class HabitActivity extends Activity {
     }
 
     @Override
-    protected void onStart() {
-        // TODO Auto-generated method stub
-        super.onStart();
+    public void onPause() {
+        super.onPause();
+        //saveInFile();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        //loadFromFile();
+    }
 
+/*
+    private void loadFromFile() {
+        ArrayList<Habit> array = new ArrayList<Habit>();
+        try {
+            FileInputStream fis = openFileInput(FILENAME);
+            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
+
+            Gson gson = new Gson();
+            // Took from https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/Gson.html Jan-21-2016
+            Type listType = new TypeToken<ArrayList<Habit>>() {}.getType();
+            array = gson.fromJson(in, listType);
+            for (Habit item: array) {
+                hl.addHabit(item);
+            }
+
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException();
+           // hl = new HabitList();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException();
+        }
+
+    }
+    private void saveInFile() {
+        try {
+            FileOutputStream fos = openFileOutput(FILENAME,
+                    0);
+
+            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
+            Gson gson = new Gson();
+            gson.toJson(hl.getHabitList(), out);
+            out.flush();
+
+            fos.close();
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException();
+        }
+    } */
 }
+

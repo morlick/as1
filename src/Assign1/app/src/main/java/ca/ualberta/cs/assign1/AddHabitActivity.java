@@ -27,6 +27,7 @@ public class AddHabitActivity extends Activity {
     private ArrayAdapter<Habit> adapter;
     private ListView oldHabitList;
 
+
     private  ArrayList<Habit> myHabitList = new ArrayList();
 
     private HabitList hl = new HabitList();
@@ -81,7 +82,10 @@ public class AddHabitActivity extends Activity {
             }
         });
     }
-
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
 
 
     @Override

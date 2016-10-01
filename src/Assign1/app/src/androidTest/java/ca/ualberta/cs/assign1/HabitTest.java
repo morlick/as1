@@ -11,12 +11,6 @@ public class HabitTest extends ActivityInstrumentationTestCase2 {
         super(ca.ualberta.cs.assign1.HabitActivity.class);
     }
 
-    public void testaddHabit() {
-        Habit habit = new Habit("test");
-        HabitList list = new HabitList();
-        list.addHabit(habit);
-        assertEquals(list.getHabit(0), habit);
-    }
     public void testRemoveHabit() {
         Habit habit = new Habit("test");
         HabitList list = new HabitList();
@@ -24,6 +18,14 @@ public class HabitTest extends ActivityInstrumentationTestCase2 {
         list.deleteHabit(habit);
         assertFalse(list.containsHabit(habit));
     }
+
+    public void testAddHabit() {
+        Habit aHabit = new Habit("test");
+        HabitList list = new HabitList();
+        list.addHabit(aHabit);
+        assertEquals(list.getHabit(0), aHabit);
+    }
+
     public void testCompleteAHabit() {
         Habit habit = new Habit("test");
         HabitList list = new HabitList();

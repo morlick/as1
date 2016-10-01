@@ -45,16 +45,7 @@ public class CompleteActivity extends Activity {
                 myTextView3.setText("Number of times completed: " + hl.getCompleted(myHabit));
             }
         });
-/*
-        dateList.addListener(new SipSession.Listener() {
-            @Override
-            public void update() {
-                dateList.clear();
-                Collection<Date> students = dateList;
-                dateList.addAll(students);
-                adapter.notifyDataSetChanged();
-            }
-        }); */
+
         oldCompletions.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view,
@@ -80,12 +71,15 @@ public class CompleteActivity extends Activity {
                     public void onClick(DialogInterface dialog, int which) {
                     }
                 });
-                //Toast.makeText(ListStudentsActivity.this, "Is the on click working?", Toast.LENGTH_SHORT).show();
                 adb.show();
                 return false;
             }
         });
 
+    }
+    @Override
+    public void onPause() {
+        super.onPause();
     }
 
 
