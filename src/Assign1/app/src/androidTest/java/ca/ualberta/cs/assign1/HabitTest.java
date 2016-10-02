@@ -40,4 +40,6 @@ public class HabitTest extends ActivityInstrumentationTestCase2 {
         list.addDay(habit, "monday");
         assertEquals(list.getDay(habit, 0), "monday");
     }
+
+
 }
