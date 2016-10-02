@@ -6,7 +6,7 @@
     <string name="save">Save</string>
     <string name="clear">Clear</string>
     <string name="click_on_a_habit">Click on a habit to complete it. It will disappear forever when you leave this page. </string>
-    <string name="add_a_habit">Add a habit</string>
+    <string name="add_a_habit">Complete a habit</string>
     <string name="monday">Monday</string>
     <string name="tuesday">Tuesday</string>
     <string name="wednesday">Wednesday</string>
@@ -20,8 +20,9 @@
     <string name="oldHabitsTitle">My habits</string>
     <string name="add_habit">Add a Habit</string>
     <string name="title_activity_add_habit">AddHabitActivity</string>
-    <string name="menu2_text">complete a habit</string>
+    <string name="menu2_text">Add a habit</string>
     <string name="title_activity_complete_habit">CompleteHabitActivity</string>
     <string name="title_activity_complete">CompleteActivity</string>
+    <string name="enter_date_string">Enter a Date or Autofill</string>
 
 </resources>

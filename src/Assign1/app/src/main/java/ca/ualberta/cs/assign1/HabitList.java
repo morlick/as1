@@ -49,7 +49,8 @@ public class HabitList {
         return habitList.get(index);
 
     }
-    //returns date habit was createed on
+
+    //returns date habit was created on
     public Date getDate(Habit habit) {
         return habit.getDate();
     }
@@ -88,6 +89,5 @@ public class HabitList {
         ArrayList<String> list;
         list = habit.getDaysToComplete();
         return list.get(index);
-
     }
 }
