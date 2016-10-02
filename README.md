@@ -6,4 +6,4 @@ My video can be foud at :
   https://youtu.be/GijsK2sRYdA
   
 It currently works in SDK 21
-The current version is in branch sunday
+
