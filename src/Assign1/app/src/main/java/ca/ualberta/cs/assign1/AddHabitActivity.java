@@ -73,8 +73,8 @@ public class AddHabitActivity extends Activity {
                         Habit habit = myHabitList.get(finalPosition);
                         myHabitList.remove(habit);
                         hl.deleteHabit(habit);
-                        //adapter.remove(habit);
-                        //adapter.notifyDataSetChanged();
+                        Intent intent = new Intent(AddHabitActivity.this, AddHabitActivity.class);
+                        startActivity(intent);
 
                     }
                 });
