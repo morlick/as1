@@ -1,2 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
+        <dex dex="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.0_77bef14b750e4453027c6136d62e821ac2e9e675.jar" />
+    </item>
+    <item
+        jar="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
+        <dex dex="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.0_594636cc9157fc6abdbe655929b1020468d1d6bb.jar" />
+    </item>
+    <item
+        jar="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
+        <dex dex="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.0_084b5f84e59420e08c879f1655326ec174dec394.jar" />
+    </item>
+    <item
+        jar="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
+        <dex dex="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-24.2.0_df25a9a46cfc2dbf57b6b1b5dacb70582cacac06.jar" />
+    </item>
+    <item
+        jar="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
+        <dex dex="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.0_2f5904fe3d8c1e3da979c0565c6f9cd4486e1aa6.jar" />
+    </item>
+    <item
+        jar="/afs/ualberta.ca/home/o/r/orlick/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.0/support-annotations-24.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
+        <dex dex="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.0_b4f634e775a9d4102dc949cf68d7ad878a90babd.jar" />
+    </item>
+    <item
+        jar="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
+        <dex dex="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_2acf89b332773ac67b35bc57171eac7367d4d428.jar" />
+    </item>
+    <item
+        jar="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
+        <dex dex="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-24.2.0_3df0058e4a7df438f9407c9a8233d96f1d88f01e.jar" />
+    </item>
+    <item
+        jar="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
+        <dex dex="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_2c4347e47e4b86e49f2a48508ca7f49b5c9e5a26.jar" />
+    </item>
+    <item
+        jar="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
+        <dex dex="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.0_8c07708d5426d25f8f1d5f904968b0f21e74ede0.jar" />
+    </item>
+    <item
+        jar="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
+        <dex dex="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_eb978734769def5119e321f5ba5a318021c5e555.jar" />
+    </item>
+    <item
+        jar="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
+        <dex dex="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_0b697b947026575b6f680ef85caf58cd97c3b21f.jar" />
+    </item>
+    <item
+        jar="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
+        <dex dex="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.0_ed482cc90b2695b28aacce7ec442af6b1572d195.jar" />
+    </item>
+    <item
+        jar="/afs/ualberta.ca/home/o/r/orlick/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/pre-dexed/debug/gson-2.7_4260a2e0a8b4c0971f297c3f71626ce98acedae9.jar" />
+    </item>
+    <item
+        jar="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
+        <dex dex="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-24.2.0_0ad8bbf3a97ef7f40a8393ed4e2157239156e899.jar" />
+    </item>
+    <item
+        jar="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
+        <dex dex="/afs/ualberta.ca/home/o/r/orlick/as1/src/Assign1/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_11fecf167d2adf6cf5dc8cd677fb4678952a4e43.jar" />
+    </item>
+
+</items>
