@@ -14,6 +14,17 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.lang.reflect.Type;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -29,7 +40,7 @@ A User can view the habits and delete habits.
 public class AddHabitActivity extends Activity {
     private ArrayAdapter<Habit> adapter;
     private ListView oldHabitList;
-
+    private String FILENAME = "file.json";
 
     private  ArrayList<Habit> myHabitList = new ArrayList();
 
@@ -40,6 +51,7 @@ public class AddHabitActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.complete_activity);
 
+
         oldHabitList = (ListView) findViewById( R.id.oldHabitsList);
 
         // When a user clicks on a list item, they do to a page of the history of that habit
@@ -49,7 +61,7 @@ public class AddHabitActivity extends Activity {
                                     long id) {
                 //goes to habit record
                 Intent intent = new Intent(AddHabitActivity.this, CompleteActivity.class);
-                intent.putExtra("name",position);
+                intent.putExtra("name", position);
                 startActivity(intent);
             }
         });
@@ -63,7 +75,7 @@ public class AddHabitActivity extends Activity {
 
                 //prompts to delete habit
                 AlertDialog.Builder adb = new AlertDialog.Builder(AddHabitActivity.this);
-                adb.setMessage("Delete "+myHabitList.get(position).getName()+"?");
+                adb.setMessage("Delete " + myHabitList.get(position).getName() + "?");
                 adb.setCancelable(true);
                 final int finalPosition = position;
                 adb.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
@@ -73,8 +85,6 @@ public class AddHabitActivity extends Activity {
                         Habit habit = myHabitList.get(finalPosition);
                         myHabitList.remove(habit);
                         hl.deleteHabit(habit);
-                        Intent intent = new Intent(AddHabitActivity.this, AddHabitActivity.class);
-                        startActivity(intent);
 
                     }
                 });
@@ -93,6 +103,7 @@ public class AddHabitActivity extends Activity {
     @Override
     public void onPause() {
         super.onPause();
+        saveInFile();
     }
 
     // in the menu the user can return to the add habit screen
@@ -111,6 +122,9 @@ public class AddHabitActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
+        myHabitList = null;
+        loadFromFile();
+
 
         //simple adapter code adapted from code at
         //http://stackoverflow.com/questions/7920558/android-date-format-inside-listview
@@ -145,12 +159,48 @@ public class AddHabitActivity extends Activity {
                 new int[] {android.R.id.text1,
                         android.R.id.text2});
 
-        myHabitList = hl.getHabitList();
+        //myHabitList = hl.getHabitList();
         oldHabitList.setAdapter(adapter);
         //oldHabitList.setOnItemClickListener(this);
 
         //oldHabitList.setSelection(0);
 
     }
+
+    private void loadFromFile() {
+        ArrayList<String> tweets = new ArrayList<String>();
+        try {
+            FileInputStream fis = openFileInput(FILENAME);
+            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
+            Gson gson = new Gson();
+            //Code taken from http://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt Sept.22,2016
+            Type listType = new TypeToken<ArrayList<Habit>>(){}.getType();
+            myHabitList = gson.fromJson(in, listType);
+            deleteFile(FILENAME);
+        } catch (FileNotFoundException e) {
+            myHabitList = new ArrayList<Habit>();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException();
+        }
+    }
+
+    private void saveInFile() {
+        try {
+
+            FileOutputStream fos = openFileOutput(FILENAME,0);
+            OutputStreamWriter writer = new OutputStreamWriter(fos);
+            Gson gson = new Gson();
+            gson.toJson(myHabitList, writer);
+            writer.flush();
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException();
+        }
+    }
+
 
 }

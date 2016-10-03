@@ -12,6 +12,12 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -19,7 +25,6 @@ import java.util.Date;
 /*
 This shows a list of completions of habits.
 the user can complete the ahbit or delete the record of completion.
-
 */
 
 
@@ -29,6 +34,7 @@ public class CompleteActivity extends Activity {
     private ArrayList<Date> dateList = new ArrayList<Date>();
     private ArrayAdapter<Date> adapter;
     private Habit myHabit;
+    private String FILENAME = "file.json";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +102,8 @@ public class CompleteActivity extends Activity {
     @Override
     public void onPause() {
         super.onPause();
+        deleteFile(FILENAME);
+        saveInFile();
     }
 
 
@@ -123,6 +131,23 @@ public class CompleteActivity extends Activity {
 
         adapter = new ArrayAdapter<Date>(this,  R.layout.list_item_2, dateList);
         oldCompletions.setAdapter(adapter);
+    }
+
+    private void saveInFile() {
+        try {
+
+            FileOutputStream fos = openFileOutput(FILENAME,0);
+            OutputStreamWriter writer = new OutputStreamWriter(fos);
+            Gson gson = new Gson();
+            gson.toJson(hl.getHabitList(), writer);
+            writer.flush();
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException();
+        }
     }
 
 }

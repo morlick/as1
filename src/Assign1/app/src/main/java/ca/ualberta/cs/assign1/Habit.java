@@ -16,7 +16,7 @@ public class Habit  {
     private ArrayList<String> daysToComplete = new ArrayList<String>();
     private Date date;
     private int completed = 0;
-//creates a habit with user provided date and habit
+    //creates a habit with user provided date and habit
     public Habit(String name, Date date) {
         this.name = name;
         this.date = date;

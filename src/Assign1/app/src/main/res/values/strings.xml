@@ -5,7 +5,7 @@
     <string name="app_name">orlick-HabitTracker</string>
     <string name="save">Save</string>
     <string name="clear">Clear</string>
-    <string name="click_on_a_habit">Click on a habit to complete it. Click and hold to delete it.</string>
+    <string name="click_on_a_habit">Click on a habit to complete it. Click and hold to delete it. Then go back to the previous screen from the menu and when you return it will be gone.Do not click on the habit again after it has been deleted.  </string>
     <string name="add_a_habit">Add a habit</string>
     <string name="monday">Monday</string>
     <string name="tuesday">Tuesday</string>
@@ -22,6 +22,7 @@
     <string name="title_activity_add_habit">AddHabitActivity</string>
     <string name="menu2_text">complete a habit</string>
     <string name="title_activity_complete_habit">CompleteHabitActivity</string>
+    <string name="enter_date_string">Enter a Date or Autofill</string>
     <string name="title_activity_complete">CompleteActivity</string>
 
 </resources>
